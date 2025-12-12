@@ -1,0 +1,357 @@
+
+
+.page_title h1 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size : 60px ;
+    width : 50%; /* the width of the h1 must not exceed 50% of the container */
+    margin :auto ; /* center align the block */ 
+    text-align : center ; /* center align the text */
+    padding-bottom: 10px;
+}
+.style-image img {
+    display : block ; /* make the image a block element */
+    border-radius: 20px; /* adjust the roundess of the border */
+    border : 10px solid #5fb9ea;
+     /* When the image has a defined width , auto adjust the margin - left and margin - right will divide the space equally => center image */
+    margin-right : auto ;
+    max-width: 100% ; /* ensure the image does not overflow the container */
+    height: auto ; 
+    /* maintain the height to width ratio of the image ensure that the image will be responsive and the browser will adjust the height and width  of the image automatically */
+
+}
+.nav-bar{
+
+    background-image: url("./can-the-party-of-heroes-from-frieren-beat-kargalgan-and-his-v0-nvklf3dkuxqe1.webp");
+    background-size: cover  ; /* ensure the background image covers the entire nav-bar */
+    background-position : center 8% ; /* center the background image horizontally and align it to the top vertically */
+    position : relative ; 
+    /* to position the background image where i was originally placed */
+    
+    filter : brightness(1.2) ; /* make the background image slightly darker to enhance text visibility */
+    background-color: #53cdb8;
+    padding : 40px 0px ; /* adjusting the size of the nav-bar */
+    margin : 30px; 
+    text-align: center ; 
+    border-radius: 20px; /* độ tròn của border */
+    margin-bottom: 50px ; 
+
+
+ 
+
+}
+
+.nav-bar ul{ 
+    list-style-type: none; /* xoá cái bullet poitn */
+    margin: 0 ; 
+    padding : 0 ;
+    display: inline-block; /* giúp center cái khối ul */
+}
+
+.nav-bar li {
+    display: inline-block  ; /* làm cái list item xuất hiện trên cùng 1 hàng */
+    margin :0 15px ;  /* khoảng cách giữa các mục trong thanh điều hướng */
+}
+.nav-bar a {
+    text-decoration: none ; /* xoá gạch chân dưới link */
+    color : #22b9c6 ;
+    font-weight: bold ;
+    font-size: 40px ;
+    transition : color 1s ease ; /* hiệu ứng chuyển màu khi trỏ chuột vào mượt mà hơn */
+}
+.nav-bar a:hover{
+    color : #ca19ed ; 
+}
+.paragraph {
+   /* font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;*/
+   /* change the background from solid to semi - transparent */
+   color : #0d4f4f;
+
+    margin-top : 30px;
+    font-size : 30px ;
+    line-height: 1.6 ; /* khoảng cách giữa các dòng */
+    text-align: center  ; /* canh đều hai bên */
+    flex-grow: 1 ; /* cho phần nội dung chiếm không gian còn lại trong khung flex */
+    /* có nghĩa là cái flex item bên trong cái flex container có thể mở rộng để chiếm hết không gian của cái container */
+    padding-left  : 100px ; /* thêm khoảng cách bên trái của phần nội dung */
+    background-color: rgba(34, 185, 198, 0.4); /* màu nền với độ trong suốt */;
+    /* tính năng màu nền rgba giúp bạn chỉnh thêm được độ trong suốt của màu nền */
+    border-radius: 20px;
+    padding-left: 100px ;
+    padding : 20px;
+    margin-left : 20px;
+    /* make the background more blurred */
+    backdrop-filter: blur(15px); /* Increased from previous value (e.g., 8px) to 15px */
+  -webkit-backdrop-filter: blur(15px); /* for Safari */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for better visibility */
+   
+}
+.content-section { /* the flex box */
+    max-width: 1300px ; /* giới hạn chiều rộng tối đa của phần nội dung */
+    display:flex; /* cho phần nội dung sử dụng flexbox */
+    flex-direction: row; /* sắp xếp các phần tử con theo cột */
+    align-items: flex-start; 
+    /* căn chỉnh các phần tử con về phía đầu của khung flex do trục vertical của cross axis */
+    justify-content: center ; /* căn giữa các phần tử con trong khung flex do trục horizontal đã set ( flex -direction : row ) của main axis */
+    gap: 30px; ; /* khoảng cách giữa các phần tử con */
+    padding : 0 20px ; /* thêm khoảng cách bên trong phần nội dung */
+}
+.background-container{
+    position : fixed ; 
+    top : 0 ; 
+    left : 0 ; /* đặt phần tử nền ở góc trên bên trái của trang */
+    width : 100% ;
+    height : 100% ;
+    z-index : -1 ; /* đặt phần tử nền phía sau các phần tử khác */
+    filter  : (5px);
+    background-image :url("./flowers-in-frieren-v0-hxyzsis602gd1.jpg");
+    background-position-y: center; /* căn giữa background - image theo chiều dọc */
+    background-size : cover;
+}
+
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .page_title h1 {
+        font-size: 40px ;
+        width: 80% ;
+    }
+}
+.page_title_2 h1 {
+    font-size : 60px ; 
+    text-align : center ;
+    margin-bottom: 15px ;
+    padding : 10px ; 
+    font-family: 'Dancing Script', cursive;
+}
+.Gallary-grid {
+    display : grid; 
+    grid-template-columns: repeat(3, 1fr ); /* tạo 3 cột có kích thước bằng nhau */
+    gap : 0 ; /* khoảng cách giữa các hình ảnh */
+    max-width : 250px ;    /* giới hạn chiều rộng tối đa của lưới hình ảnh */
+}
+.Gallary-grid img {
+    width : 100% ; /* đảm bảo hình ảnh chiếm toàn bộ chiều rộng của ô lưới */
+    height :100% ; /* duy trì tỷ lệ khung hình của hình ảnh */
+   
+    object-fit: cover ; /* cắt hình ảnh để lấp đầy ô lưới mà không làm biến dạng */ 
+    display : block ; /* loại bỏ khoảng trắng dưới hình ảnh */
+    
+}
+.background-container-2{
+    background-attachment : fixed ; /* giữ cho hình nền cố định khi cuộn trang */
+    position : fixed ; /* giữ phần tử nền cố định trên trang */
+    top : 0 ; 
+    left : 0 ; /* đặt phần tử nền ở góc trên bên trái của trang */
+    width : 100% ;
+    height : 100% ;
+    z-index : -1 ; /* đặt phần tử nền phía sau các phần tử khác */
+    align-items : start ;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./Mount\ fuji\ background.png');
+    /* chỉnh độ sáng của background */ 
+    filter:brightness(1.5);
+    /*rga(0, 0, 0, 0.2) để tạo lớp phủ mờ đen trên hình nền giúp tăng độ tương phản và làm nổi bật nội dung phía trước */
+    background-position-y: center; /* căn giữa background - image theo chiều dọc */
+    background-size : cover;
+    grid-template-rows: auto ;
+}
+.paragraph-2{
+   /* font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;*/
+   /* change the background from solid to semi - transparent */
+   
+    font-size : 30px ;
+    line-height: 1.6 ; /* khoảng cách giữa các dòng */
+    text-align: center  ; /* canh đều hai bên */
+    
+    /* có nghĩa là cái flex item bên trong cái flex container có thể mở rộng để chiếm hết không gian của cái container */
+    background-color: rgba(34, 185, 198, 0.4); /* màu nền với độ trong suốt */;
+    /* tính năng màu nền rgba giúp bạn chỉnh thêm được độ trong suốt của màu nền */
+    border-radius: 20px;
+    color : #0d4f4f;
+    padding : 20px;
+    
+    /* make the background more blurred */
+    backdrop-filter: blur(15px); /* Increased from previous value (e.g., 8px) to 15px */
+  -webkit-backdrop-filter: blur(15px); /* for Safari */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for better visibility */
+   
+}
+
+.content-section-2{ /* the grid box */
+    max-width: 1300px ; /* giới hạn chiều rộng tối đa của phần nội dung */
+    display:grid ; /* cho phần nội dung sử dụng flexbox */
+    grid-template-columns: 2fr 1fr;
+    align-items: center; /* prevent text box from stretching to match image height */
+    /* căn chỉnh các phần tử con về phía đầu của khung flex do trục vertical của cross axis */
+    gap: 20px; ; /* khoảng cách giữa các phần tử con */
+    padding : 0 20px ; /* thêm khoảng cách bên trong phần nội dung */
+    overflow : hidden ; /* prevent content overflow */
+}
+.day-section{
+    background-color: rgba(34, 185, 198, 0.4); /* màu nền với độ trong suốt */;
+    /* tính năng màu nền rgba giúp bạn chỉnh thêm được độ trong suốt của màu nền */
+    border-radius: 20px;
+    padding : 10px;
+    margin : 5px 0;
+    text-align: center ;
+    color : #2c3e50;
+    font-size : 25px ;
+    margin-bottom : 40px; 
+    line-height: 1.6 ; /* khoảng cách giữa các dòng */
+}
+
+
+.background-container-3{
+    background-attachment : fixed ; /* giữ cho hình nền cố định khi cuộn trang */
+    position : fixed ; /* giữ phần tử nền cố định trên trang */
+    top : 0 ; 
+    left : 0 ; /* đặt phần tử nền ở góc trên bên trái của trang */
+    width : 100% ;
+    height : 100% ;
+    z-index : -1 ; /* đặt phần tử nền phía sau các phần tử khác */
+    align-items : start ;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./Background\ ghibli\ .png');
+    /* chỉnh độ sáng của background */ 
+    filter:brightness(1.5);
+    /*rga(0, 0, 0, 0.2) để tạo lớp phủ mờ đen trên hình nền giúp tăng độ tương phản và làm nổi bật nội dung phía trước */
+    background-position-y: center; /* căn giữa background - image theo chiều dọc */
+    background-size : cover;
+    grid-template-rows: auto ;
+}
+
+.paragraph-3{
+   /* font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;*/
+   /* change the background from solid to semi - transparent */
+   font-family : 'Noto Sans', 'Roboto', sans-serif;
+    color : #0d4f4f;
+   margin-top: 30px;
+    font-size : 22px ;
+    font-weight: 400;
+    /*font weight làm chữ đậm hơn */
+    letter-spacing : 0.5px; /* khoảng cách giữa các chữ */
+    line-height: 2 ; /* khoảng cách giữa các dòng */
+    text-align: center  ; /* canh đều hai bên */
+    
+    /* có nghĩa là cái flex item bên trong cái flex container có thể mở rộng để chiếm hết không gian của cái container */
+    background-color: rgba(20, 60 , 80 , 0.75 ); /* màu nền với độ trong suốt */;
+    /* tính năng màu nền rgba giúp bạn chỉnh thêm được độ trong suốt của màu nền */
+    border-radius: 20px;
+    color : #ffffff;
+    padding : 30px 40px;
+    
+    text-shadow : 2px 2px 2px rgba(0, 0, 0, 0.3); /* thêm bóng cho chữ để tăng độ tương phản */
+    /* make the background more blurred */
+    backdrop-filter: blur(15px); /* Increased from previous value (e.g., 8px) to 15px */
+  -webkit-backdrop-filter: blur(15px); /* for Safari */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow for better visibility */
+   
+}
+
+
+.Gallary-grid-2{
+    display : grid; 
+    grid-template-columns: repeat(2, 1fr ); /* tạo 3 cột có kích thước bằng nhau */
+    gap : 0 ; /* khoảng cách giữa các hình ảnh */
+    max-width : 600px ;    /* giới hạn chiều rộng tối đa của lưới hình ảnh */
+}
+.Gallary-grid-2 img {
+    width : 100% ; /* đảm bảo hình ảnh chiếm toàn bộ chiều rộng của ô lưới */
+    height :100% ; /* duy trì tỷ lệ khung hình của hình ảnh */
+   
+    object-fit: cover ; /* cắt hình ảnh để lấp đầy ô lưới mà không làm biến dạng */ 
+    display : block ; /* loại bỏ khoảng trắng dưới hình ảnh */
+    
+}
+
+/* Contact Form Styles */
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(34, 185, 198, 0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form-container h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 45px;
+    text-align: center;
+    color: #0d4f4f;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: 'Noto Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #0d4f4f;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 15px;
+    border: 2px solid rgba(34, 185, 198, 0.5);
+    border-radius: 10px;
+    font-family: 'Noto Sans', Arial, sans-serif;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #2c3e50;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* focus để làm nổi bật trường nhập liệu khi người dùng click vào */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none; /* xoá viền mặc định khi focus */
+    border-color: #22b9c6;
+    box-shadow: 0 0 10px rgba(34, 185, 198, 0.5);
+}
+/* Placeholder styles */
+/* place holder để hiện văn bản gợi ý bên trong các trường nhập liệu trước khi người dùng nhập dữ liệu */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #7f8c8d;
+}
+/* text area để người dùng nhập văn bản dài hơn */
+.form-group textarea {
+    resize: vertical; /* resize vertical để người dùng chỉ có thể thay đổi chiều dài của khung văn bản */
+    min-height: 120px;
+}
+
+.submit-btn {
+    padding: 15px 30px; /* 15px trên dưới , 30px trái phải */
+    background-color: #22b9c6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Noto Sans', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer; /* thay đổi con trỏ chuột khi hover vào nút */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* thêm hiệu ứng chuyển đổi màu nền và hiệu ứng dịch chuyển khi hover và active */
+}
+
+.submit-btn:hover {
+    background-color: #1a9aa5;
+    transform: translateY(-2px); /* nâng nút lên khi hover */
+}
+
+.submit-btn:active {
+    transform: translateY(0); /* trở về vị trí ban đầu khi nhấn nút */
+}
