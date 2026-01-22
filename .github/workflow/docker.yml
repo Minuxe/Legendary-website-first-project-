@@ -10,7 +10,7 @@ jobs:
     steps: 
       #Setup 1 : download your code 
       - name : Checkout code 
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       #Setup 2 : Login to docker hub
       - name : Login to Docker hub 
@@ -22,6 +22,6 @@ jobs:
       #Setup 3 : build and push docker image 
       - name : Build and Push Docker image
         run : |
-          docker build -t my-docker-image:latest .
+          docker build -t my-cat-website:latest .
           docker tag my-docker-image:latest ${{ secrets.DOCKER_USERNAME}}/my-docker-image:latest
           docker push ${{ secrets.DOCKER_USERNAME}}/my-docker-image:latest
