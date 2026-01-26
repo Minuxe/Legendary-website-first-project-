@@ -13,7 +13,7 @@ COPY *.jpg /usr/share/nginx/html/
 COPY *.jpeg /usr/share/nginx/html/
 COPY *.webp /usr/share/nginx/html/
 
-RUN mv /usr/share/nginx/html/homepage.html /usr/share/nginx/html/index.html
+
 # Expose port 80 (standard web port)
 EXPOSE 80
 #tell docker this container run on port 80 
